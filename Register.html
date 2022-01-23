@@ -1,0 +1,140 @@
+<html>
+<head>
+<style>
+body {
+  font-family: monospace;
+  padding: 10px;
+  background: url("3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    
+.header {
+    text-align: center;
+    color: red;
+    height: 50px;
+    padding: 10px;
+    }
+.header h2 {
+    font-size: 22px;
+    font-family: cursive;
+    }
+    
+.bo {
+    box-sizing: border-box;
+    padding: 50px 40px; 
+    }
+  
+input[type=text] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+     border-radius: 15px;
+}
+
+input[type=password] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+     border-radius: 15px;
+}
+    
+input[type=number] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+     border-radius: 15px;
+}
+
+input[type=submit] {
+    
+  background-color: #45cff0;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 10px 25px;
+    }
+    
+input[type=reset] {
+    
+  background-color: red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 10px 25px;
+    }
+
+        
+    }
+
+</style>
+    <script type="text/javascript">
+    function email()
+        {
+        var a=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,4}$/;
+        var b=document.getElementById("mm").value;
+    if(a.test(b)==false)
+        {
+        alert("Invalid Email ID");
+        return (false);
+        }
+        }
+    function phone()
+        {
+        var p=/^[0-9]{10}$/;
+        var m=document.getElementById("num").value;
+         if(p.test(m)==false)
+        {
+        alert("Please enter a valid Mobile number");
+        return (false);
+        }
+        }    
+        
+    function sign()
+        {
+            alert("You have successfully registered as an user");
+        }
+        
+    function pswrd()
+        {
+            var psd=document.getElementById("pass").value;
+            var pswd=document.getElementById("cpass").value;
+            if(psd!=pswd)
+                {
+                    alert("Password doesnot match");
+                }
+
+    </script>
+      
+</head>
+<body>
+
+  <div class="header">
+  <h2><u>USER REGISTRATION</u></h2>
+    </div>
+    <div class="bo" align="center">
+       <form>
+            <input type="text" name="user" placeholder="Username" required><br><br>
+            <input type="text" name="use" id="mm" placeholder="someone@example.com" onchange="email()" required><br><br>
+            <input type="number" name="num" id="num" placeholder="Mobile number" onchange="phone()" required><br><br>
+            <input type="password" name="pass" id="pass" placeholder="New Password" required><br><br>
+            <input type="password" name="pass" id="cpass" placeholder="Confirm Password" onchange="pswrd()" required><br><br>
+            <input type="checkbox" name="check" id="check"> I agree to the, <a href="##">Terms & conditions.</a><br><br>
+            <input type="submit" name="sub" value="Sign Up" class="button" onclick="sign()">  <input type="reset" name="res" value="Reset" class="button"><br><br>
+            <a href="login.html">Already have an account? Sign in</a><br>
+        
+        </form>
+    </div>
+</body>
+</html>
